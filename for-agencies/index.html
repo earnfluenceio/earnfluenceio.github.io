@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Earnfluence for Agencies — Run every client's affiliate program from one place</title>
+  <meta name="description" content="The affiliate platform built for agencies. Multi-client dashboard, white-label portals, bulk payouts.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <link rel="stylesheet" href="/assets/css/static.css">
+</head>
+<body>
+<header class="site-header">
+  <input type="checkbox" id="nav-toggle" class="nav-check" aria-hidden="true">
+  <label for="nav-toggle" class="nav-mobile-backdrop" aria-hidden="true"></label>
+  <nav>
+    <a href="/" class="nav-logo"><div class="logo-mark">E</div>Earnfluence</a>
+    <ul class="nav-links">
+    <li><a href="/for-brands/">For Brands</a></li>
+    <li><a href="/for-creators/">For Creators</a></li>
+    <li><a href="/for-agencies/" class="active">For Agencies</a></li>
+    <li><a href="/pricing/">Pricing</a></li>
+    <li><a href="/resources/">Resources</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="/login/" class="btn-text">Log in</a>
+      <a href="/signup/" class="btn-primary">Request access</a>
+    </div>
+    <label for="nav-toggle" class="nav-burger" aria-label="Toggle menu">
+      <svg class="nav-icon-open" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      <svg class="nav-icon-close" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"/></svg>
+    </label>
+    <div class="nav-mobile-panel">
+      <a href="/for-brands/">For Brands</a>
+      <a href="/for-creators/">For Creators</a>
+      <a href="/for-agencies/" class="active">For Agencies</a>
+      <a href="/pricing/">Pricing</a>
+      <a href="/resources/">Resources</a>
+      <a href="/login/">Log in</a>
+      <a href="/signup/" class="btn-primary" style="text-align:center;margin-top:0.5rem;">Request access</a>
+    </div>
+  </nav>
+</header>
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-eyebrow">For Agencies</div>
+  <h1>Run every client's affiliate program from <span class="gradient">one place.</span></h1>
+  <p class="hero-sub">Multi-client dashboard, white-label portals, and bulk payouts. Built for agencies managing affiliate programs across multiple brands.</p>
+  <div class="hero-actions">
+    <a href="#early-access" class="btn-primary">Request access</a>
+    <a href="#workflow" class="btn-secondary">See how it works</a>
+  </div>
+  <p class="hero-note">No demo required. Built for agencies of any size.</p>
+</div>
+
+<!-- DASHBOARD MOCKUP -->
+<div class="mockup-wrap">
+  <div class="mockup-glow"></div>
+  <div class="mockup">
+    <div class="mockup-chrome">
+      <div class="chrome-dot"></div>
+      <div class="chrome-dot"></div>
+      <div class="chrome-dot"></div>
+      <div class="chrome-url">app.earnfluence.com/agency/dashboard</div>
+    </div>
+    <div class="mockup-body">
+      <aside class="mockup-sidebar">
+        <div class="ms-section">Agency</div>
+        <div class="ms-item active"><span class="ms-emoji">▦</span> All clients</div>
+        <div class="ms-item"><span class="ms-emoji">✎</span> Reports</div>
+        <div class="ms-item"><span class="ms-emoji">$</span> Payouts</div>
+        <div class="ms-item"><span class="ms-emoji">⚙</span> Settings</div>
+        <div class="ms-section">Clients · 8</div>
+        <div class="ms-item"><div class="ms-dot" style="background:#4f46e5;"></div> Client A</div>
+        <div class="ms-item"><div class="ms-dot" style="background:#0ea5b7;"></div> Client B</div>
+        <div class="ms-item"><div class="ms-dot" style="background:#10a86b;"></div> Client C</div>
+        <div class="ms-item"><div class="ms-dot" style="background:#d97706;"></div> Client D</div>
+        <div class="ms-item"><div class="ms-dot" style="background:#7c3aed;"></div> Client E</div>
+        <div class="ms-item" style="color:var(--ink-light);">+ 3 more</div>
+      </aside>
+      <main class="mockup-main">
+        <div class="mm-header">
+          <div>
+            <div class="mm-title">All clients overview</div>
+            <div class="mm-sub">Last 30 days · 8 active programs</div>
+          </div>
+          <span class="mm-pill">● Live</span>
+        </div>
+        <div class="mm-stats">
+          <div class="mm-stat">
+            <div class="mm-stat-label">Tracked revenue</div>
+            <div class="mm-stat-val">$284,910</div>
+            <div class="mm-stat-delta">↑ 12.4%</div>
+          </div>
+          <div class="mm-stat">
+            <div class="mm-stat-label">Conversions</div>
+            <div class="mm-stat-val">3,847</div>
+            <div class="mm-stat-delta">↑ 8.1%</div>
+          </div>
+          <div class="mm-stat">
+            <div class="mm-stat-label">Active creators</div>
+            <div class="mm-stat-val">412</div>
+            <div class="mm-stat-delta">↑ 24</div>
+          </div>
+          <div class="mm-stat">
+            <div class="mm-stat-label">Pending payouts</div>
+            <div class="mm-stat-val">$18,420</div>
+            <div class="mm-stat-delta amber">12 awaiting</div>
+          </div>
+        </div>
+        <div class="mm-chart">
+          <div class="mm-chart-head">
+            <div class="mm-chart-title">Revenue by client</div>
+            <div class="mm-chart-legend">
+              <span class="mm-legend-item"><span class="mm-legend-dot" style="background:#4f46e5;"></span> Client A</span>
+              <span class="mm-legend-item"><span class="mm-legend-dot" style="background:#0ea5b7;"></span> Client B</span>
+              <span class="mm-legend-item"><span class="mm-legend-dot" style="background:#10a86b;"></span> Client C</span>
+            </div>
+          </div>
+          <svg viewBox="0 0 600 100" preserveAspectRatio="none" style="width:100%; height:90px;">
+            <defs>
+              <linearGradient id="g1" x1="0" x2="0" y1="0" y2="1">
+                <stop offset="0%" stop-color="#4f46e5" stop-opacity="0.35"/>
+                <stop offset="100%" stop-color="#4f46e5" stop-opacity="0"/>
+              </linearGradient>
+            </defs>
+            <path d="M0,75 L40,68 L80,72 L120,58 L160,62 L200,48 L240,52 L280,38 L320,42 L360,30 L400,35 L440,22 L480,28 L520,18 L560,24 L600,12 L600,100 L0,100 Z" fill="url(#g1)"/>
+            <path d="M0,75 L40,68 L80,72 L120,58 L160,62 L200,48 L240,52 L280,38 L320,42 L360,30 L400,35 L440,22 L480,28 L520,18 L560,24 L600,12" fill="none" stroke="#4f46e5" stroke-width="2"/>
+            <path d="M0,85 L40,82 L80,84 L120,78 L160,76 L200,72 L240,68 L280,64 L320,60 L360,58 L400,54 L440,50 L480,52 L520,48 L560,44 L600,42" fill="none" stroke="#0ea5b7" stroke-width="2" opacity="0.7"/>
+            <path d="M0,90 L40,88 L80,86 L120,85 L160,82 L200,80 L240,78 L280,75 L320,73 L360,70 L400,68 L440,66 L480,63 L520,62 L560,60 L600,58" fill="none" stroke="#10a86b" stroke-width="2" opacity="0.7"/>
+          </svg>
+        </div>
+        <div class="mm-table">
+          <div class="mm-table-head">
+            <div>Client</div>
+            <div>Revenue</div>
+            <div>Conversions</div>
+            <div>Status</div>
+          </div>
+          <div class="mm-table-row">
+            <div class="mm-client"><div class="mm-client-avatar">A</div> Client A</div>
+            <div class="num">$94,210</div>
+            <div class="num">1,284</div>
+            <div><span class="wf-vis-tag tag-active">Active</span></div>
+          </div>
+          <div class="mm-table-row">
+            <div class="mm-client"><div class="mm-client-avatar" style="background:#d3f0e6; color:#10a86b;">B</div> Client B</div>
+            <div class="num">$72,890</div>
+            <div class="num">982</div>
+            <div><span class="wf-vis-tag tag-active">Active</span></div>
+          </div>
+          <div class="mm-table-row">
+            <div class="mm-client"><div class="mm-client-avatar" style="background:#e0f3f6; color:#0ea5b7;">C</div> Client C</div>
+            <div class="num">$58,420</div>
+            <div class="num">751</div>
+            <div><span class="wf-vis-tag tag-active">Active</span></div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+</div>
+
+<!-- PROBLEM -->
+<div class="section">
+  <div class="section-eyebrow">The agency problem</div>
+  <h2 class="section-title">Affiliate software wasn't built for agencies.</h2>
+  <p class="section-lead">Most platforms assume one merchant, one program. That's not how an agency works.</p>
+  <div class="problem-grid">
+    <div class="problem-card">
+      <h4><span class="x">—</span> One client per account</h4>
+      <p>Ten clients means ten logins. Data lives in ten places.</p>
+    </div>
+    <div class="problem-card">
+      <h4><span class="x">—</span> White-label costs extra</h4>
+      <p>On most platforms, branded portals are an enterprise upgrade.</p>
+    </div>
+    <div class="problem-card">
+      <h4><span class="x">—</span> Pricing punishes growth</h4>
+      <p>Per-affiliate and per-program fees stack across a client roster.</p>
+    </div>
+    <div class="problem-card">
+      <h4><span class="x">—</span> Payouts run client by client</h4>
+      <p>Most tools hand you a CSV and tell you to figure out the rest.</p>
+    </div>
+  </div>
+</div>
+
+<!-- FEATURES -->
+<div class="section-band">
+  <div class="section">
+    <div class="section-eyebrow">Built for agencies</div>
+    <h2 class="section-title">Every feature scoped to multi-client work.</h2>
+    <p class="section-lead">Designed for the way agencies actually operate. No retrofitting.</p>
+    <div class="features-grid">
+      <div class="feat-card">
+        <div class="feat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+        </div>
+        <h4>Multi-client dashboard</h4>
+        <p>Every client in one login. Drill into a single program or see your full roster at a glance.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M2 12h20"/><path d="M12 3a14 14 0 010 18"/></svg>
+        </div>
+        <h4>White-label portals</h4>
+        <p>Custom domain, logo, and colors per client. Included on standard plans.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="8" r="3.5"/><circle cx="17" cy="8" r="3"/><path d="M3 19a6 6 0 0112 0"/><path d="M14 19a6 6 0 016-0"/></svg>
+        </div>
+        <h4>Cross-client creator pool</h4>
+        <p>Recruit a creator once. Assign them to any client. Track everything in one place.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 8h16M4 12h16M4 16h10"/><circle cx="18" cy="16" r="3"/></svg>
+        </div>
+        <h4>Bulk payouts</h4>
+        <p>Process payouts across every client in one workflow. Stripe, PayPal, and Wise.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 17l5-5 4 4 8-8"/><path d="M17 8h4v4"/></svg>
+        </div>
+        <h4>Client-ready reporting</h4>
+        <p>Export, schedule, or white-label reports. Per-client breakdowns built in.</p>
+      </div>
+      <div class="feat-card">
+        <div class="feat-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 17l-4-4 4-4M15 7l4 4-4 4"/><path d="M12 2v20" opacity="0.4"/></svg>
+        </div>
+        <h4>Connects to your stack</h4>
+        <p>Stripe, PayPal, and more. Subscriptions, renewals, and refunds tracked automatically.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- WORKFLOW -->
+<div class="section" id="workflow">
+  <div class="section-eyebrow">How it works</div>
+  <h2 class="section-title">From client kickoff to first payout.</h2>
+  <p class="section-lead">A new client onboarded in under 15 minutes.</p>
+  <div class="workflow">
+    <div class="wf-list">
+      <div class="wf-step active">
+        <div class="wf-num">1</div>
+        <div class="wf-content">
+          <h4>Onboard the client</h4>
+          <p>Create a workspace, connect their payment stack, set commission rules.</p>
+        </div>
+      </div>
+      <div class="wf-step">
+        <div class="wf-num">2</div>
+        <div class="wf-content">
+          <h4>Brand the portal</h4>
+          <p>Apply the client's logo, colors, and domain. Creators see the client's brand.</p>
+        </div>
+      </div>
+      <div class="wf-step">
+        <div class="wf-num">3</div>
+        <div class="wf-content">
+          <h4>Recruit creators</h4>
+          <p>Invite from your network or accept inbound applications. Bulk approve.</p>
+        </div>
+      </div>
+      <div class="wf-step">
+        <div class="wf-num">4</div>
+        <div class="wf-content">
+          <h4>Track and pay</h4>
+          <p>Real-time data per client. Bulk payouts when you're ready. Reports on autopilot.</p>
+        </div>
+      </div>
+    </div>
+    <div class="wf-visual">
+      <div class="wf-visual-inner">
+        <div style="font-size:0.78rem; color:var(--ink-light); font-weight:600; margin-bottom:0.85rem;">CLIENT WORKSPACES</div>
+        <div class="wf-vis-card">
+          <div>
+            <strong>Client A</strong>
+            <div style="font-size:0.72rem; color:var(--ink-light); margin-top:0.15rem;">Connected · Stripe</div>
+          </div>
+          <span class="wf-vis-tag tag-active">Active</span>
+        </div>
+        <div class="wf-vis-card">
+          <div>
+            <strong>Client B</strong>
+            <div style="font-size:0.72rem; color:var(--ink-light); margin-top:0.15rem;">Connected · PayPal</div>
+          </div>
+          <span class="wf-vis-tag tag-active">Active</span>
+        </div>
+        <div class="wf-vis-card">
+          <div>
+            <strong>Client C</strong>
+            <div style="font-size:0.72rem; color:var(--ink-light); margin-top:0.15rem;">Awaiting setup</div>
+          </div>
+          <span class="wf-vis-tag tag-pending">Pending</span>
+        </div>
+        <div style="font-size:0.78rem; color:var(--indigo); font-weight:600; margin-top:1rem; text-align:center; padding-top:0.85rem; border-top:1px dashed var(--border);">+ Add new client</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- COMPARISON -->
+<div class="section-band">
+  <div class="section">
+    <div class="section-eyebrow">How we compare</div>
+    <h2 class="section-title">Built for agencies, not retrofitted from a single-merchant tool.</h2>
+    <p class="section-lead">Most platforms can technically be used by an agency. Few are designed for one.</p>
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th></th>
+          <th class="us">Earnfluence</th>
+          <th>Single-merchant tools</th>
+          <th>Enterprise platforms</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Multi-client dashboard</td>
+          <td class="us"><span class="check">✓</span> Built in</td>
+          <td><span class="dash">—</span></td>
+          <td><span class="check">✓</span> Sales-led</td>
+        </tr>
+        <tr>
+          <td>White-label included</td>
+          <td class="us"><span class="check">✓</span></td>
+          <td><span class="dash">—</span> Add-on</td>
+          <td><span class="dash">—</span> Enterprise only</td>
+        </tr>
+        <tr>
+          <td>Self-serve signup</td>
+          <td class="us"><span class="check">✓</span></td>
+          <td><span class="check">✓</span></td>
+          <td><span class="dash">—</span> Demo required</td>
+        </tr>
+        <tr>
+          <td>Bulk payouts across clients</td>
+          <td class="us"><span class="check">✓</span></td>
+          <td><span class="dash">—</span></td>
+          <td><span class="check">✓</span></td>
+        </tr>
+        <tr>
+          <td>Setup time per client</td>
+          <td class="us">~15 min</td>
+          <td>1–2 hrs</td>
+          <td>Days</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="comparison-note">Single-merchant tools: Rewardful, PromoteKit, Refgrow. Enterprise: Impact, PartnerStack.</p>
+  </div>
+</div>
+
+<!-- FAQ -->
+<div class="section section-tight">
+  <div class="section-eyebrow">Common questions</div>
+  <h2 class="section-title">Things agencies usually ask first.</h2>
+  <div class="faq-list">
+    <div class="faq-item">
+      <h4>How is Earnfluence priced for agencies?</h4>
+      <p>We're finalizing agency pricing now. <a href="#early-access">Request access</a> and we'll share details directly.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Can I migrate from another platform?</h4>
+      <p>Yes. Bulk import of creator records and historical performance is supported. Migration help is included.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Do clients see their own dashboard?</h4>
+      <p>Yes. Each client gets a branded view of their own program, scoped to their data only.</p>
+    </div>
+    <div class="faq-item">
+      <h4>What payment processors do you support?</h4>
+      <p>Stripe and PayPal at launch. More on the roadmap based on what your clients use.</p>
+    </div>
+    <div class="faq-item">
+      <h4>Is there a minimum number of clients?</h4>
+      <p>No. Start with one. The multi-client features are there when you need them.</p>
+    </div>
+  </div>
+</div>
+
+<!-- EARLY ACCESS -->
+<div class="early-section" id="early-access">
+  <div class="early-glow"></div>
+  <div class="early-inner">
+    <div class="early-eyebrow">Limited Cohort</div>
+    <h2>Be one of the first agencies on Earnfluence.</h2>
+    <p>Founding agencies get priority support, roadmap input, and locked-in pricing.</p>
+    <form class="early-form" action="/signup/" method="get" >
+      <input type="email" name="email" class="early-input" placeholder="you@youragency.com" required>
+      <button type="submit" class="btn-primary">Request access</button>
+    </form>
+  </div>
+</div>
+<footer>
+  <a href="/" class="footer-logo"><div class="logo-mark">E</div>Earnfluence</a>
+  <div class="footer-links">
+    <a href="/for-brands/">Brands</a><a href="/for-creators/">Creators</a>
+    <a href="/for-agencies/">Agencies</a><a href="/pricing/">Pricing</a>
+    <a href="/privacy-policy/">Privacy</a><a href="/terms-of-service/">Terms</a>
+  </div>
+  <div class="footer-copy">© 2026 Earnfluence</div>
+</footer>
+</body>
+</html>

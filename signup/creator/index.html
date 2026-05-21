@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>AnalyticsPlus — Campaign — Earnfluence</title>
-  <meta name="description" content="20% recurring on SaaS subscriptions.">
+  <title>Sign up — Creator — Earnfluence</title>
+  <meta name="description" content="Create a free creator account on Earnfluence.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -26,7 +26,7 @@
     </ul>
     <div class="nav-actions">
       <a href="/login/" class="btn-text">Log in</a>
-      <a href="/signup/creator/" class="btn-primary">Join free</a>
+      <a href="/signup/" class="btn-primary">Start free</a>
     </div>
     <label for="nav-toggle" class="nav-burger" aria-label="Toggle menu">
       <svg class="nav-icon-open" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
@@ -39,21 +39,30 @@
       <a href="/pricing/">Pricing</a>
       <a href="/resources/">Resources</a>
       <a href="/login/">Log in</a>
-      <a href="/signup/creator/" class="btn-primary" style="text-align:center;margin-top:0.5rem;">Join free</a>
+      <a href="/signup/" class="btn-primary" style="text-align:center;margin-top:0.5rem;">Start free</a>
     </div>
   </nav>
 </header>
-<div class="section section-tight">
-  <div class="section-eyebrow">Affiliate program</div>
-  <h1 class="section-title">AnalyticsPlus</h1>
-  <p class="section-lead">20% recurring on SaaS subscriptions.</p>
-  <div class="feat-card" style="margin-top:2rem;">
-    <h4>Program details</h4>
-    <p>Cookie window: 30 days · Payout: Monthly via Stripe or PayPal · Free to join as a creator.</p>
-    <div class="hero-actions" style="justify-content:flex-start;margin-top:1.25rem;">
-      <a href="/signup/creator/" class="btn-primary">Apply to join</a>
-      <a href="/marketplace/" class="btn-secondary">← Back to marketplace</a>
-    </div>
+<div class="auth-wrap">
+  <div class="auth-card">
+    <h1>Join as a creator</h1>
+    <p class="auth-sub">Free for creators, always.</p>
+    <form action="/dashboard/creator/" method="get">
+      <div class="form-group">
+        <label for="name">Display name</label>
+        <input type="text" id="name" name="name" class="form-input" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" class="form-input" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" class="form-input" required minlength="8">
+      </div>
+      <button type="submit" class="btn-primary btn-full">Join free</button>
+    </form>
+    <p class="auth-footer"><a href="/signup/">← Back</a> · <a href="/login/">Log in</a></p>
   </div>
 </div>
 <footer>
