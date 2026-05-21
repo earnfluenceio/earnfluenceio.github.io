@@ -7,112 +7,37 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
   pages: write
   id-token: write
 
 concurrency:
-  group: "pages"
+  group: pages
   cancel-in-progress: false
 
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
-    
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Verify static site
+        run: |
+          test -f index.html
+          test -f .nojekyll
+          test -f assets/css/styles.css
+          ! grep -r '<script' . --include='*.html' --exclude-dir=.git && echo "No JavaScript in HTML"
+          find . -name '*.html' -not -path './.git/*' | head -30
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          fetch-depth: 0
-          token: ${{ secrets.GITHUB_TOKEN }}
-      
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'npm'
-      
-      - name: Install dependencies
-        run: npm ci
-      
-      - name: Build static site
-        run: npm run build
-      
-      - name: Verify build output
-        run: |
-          echo "Checking build output..."
-          ls -la out/ || echo "ERROR: out/ directory not found!"
-          ls -la out/*.html | head -5 || echo "No HTML files found!"
-          echo "Build verification complete."
-      
-      - name: Deploy to static branch
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          git config user.name "GitHub Actions"
-          git config user.email "actions@github.com"
-          
-          # Fetch all branches
-          git fetch origin
-          
-          # Checkout static branch or create it
-          if git show-ref --verify --quiet refs/remotes/origin/static; then
-            git checkout -b static origin/static
-          else
-            git checkout --orphan static
-            git rm -rf . 2>/dev/null || true
-          fi
-          
-          # Remove all files except .git and out
-          find . -maxdepth 1 ! -name '.' ! -name '.git' ! -name 'out' -exec rm -rf {} + 2>/dev/null || true
-          
-          # Copy contents of out/ to root
-          echo "Copying files from out/ to root..."
-          cp -r out/* . || echo "ERROR: Failed to copy files!"
-          cp -r out/.* . 2>/dev/null || true
-          
-          # Ensure .nojekyll exists
-          if [ -f out/.nojekyll ]; then
-            cp out/.nojekyll .
-          else
-            touch .nojekyll
-          fi
-          
-          # Remove the out/ directory after copying (it shouldn't be in the static branch)
-          rm -rf out/
-          
-          # Verify index.html exists
-          if [ ! -f index.html ]; then
-            echo "ERROR: index.html not found after copy!"
-            ls -la | head -20
-            exit 1
-          fi
-          
-          echo "Files copied successfully. Listing root directory:"
-          ls -la | head -20
-          echo ""
-          echo "Verifying index.html exists:"
-          ls -la index.html || echo "ERROR: index.html missing!"
-          
-          # Add all files
-          git add -A
-          
-          # Show what will be committed
-          echo "Files staged for commit:"
-          git status --short | head -20
-          
-          # Commit with unique message to force update
-          git commit -m "Deploy: $(date +%Y-%m-%d-%H%M%S) - Force rebuild" || exit 0
-          
-          # Configure remote URL with token
-          git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git
-          
-          # Push to static branch
-          git push origin static --force
-      
-      - name: Verify deployment
-        run: |
-          echo "✅ Deployment complete!"
-          echo "📁 Files are in the static branch: https://github.com/${{ github.repository }}/tree/static"
-          echo "⏳ GitHub Pages will rebuild in 2-5 minutes"
-          echo "🌐 Site URL: https://2keyapp.github.io/"
+          path: .
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
