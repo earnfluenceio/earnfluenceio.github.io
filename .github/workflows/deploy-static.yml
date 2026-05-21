@@ -29,7 +29,8 @@ jobs:
         run: |
           test -f index.html
           test -f .nojekyll
-          test -f assets/css/styles.css
+          test -f assets/css/site.css
+          test -f assets/css/app.css
           ! grep -r '<script' . --include='*.html' --exclude-dir=.git && echo "No JavaScript in HTML"
           find . -name '*.html' -not -path './.git/*' | head -30
 
